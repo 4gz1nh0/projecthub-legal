@@ -1,0 +1,34 @@
+# SITE PÚBLICO PROJECTHUB — BRANDING OAUTH
+
+Este pacote é SÓ UM SITE ESTÁTICO para apresentar o ProjectHUB no OAuth Google. **Não deve ser enviado ao card de atualização do ProjectHub e não altera seu Apps Script.**
+
+## 1. Colocar os links no ar
+1. Acesse https://github.com/new (conta 4gz1nh0).
+2. Crie um repositório **PÚBLICO** com nome **projecthub-legal**.
+3. Clique em **Add file > Upload files** e envie estes arquivos **sem manter a pasta externa**: `index.html`, `privacidade.html`, `termos.html`, `style.css`, `ProjectHub_logo_v2.3.12.png`, `ProjectHub_favicon_64_v2.3.12.png`, `.nojekyll` (o último é opcional).
+4. Vá a **Settings > Pages > Build and deployment**, Source = **Deploy from a branch**, Branch = **main**, Folder = **/(root)**, clique Save.
+5. Aguarde o site publicar. Abra os três endereços previstos e confirme que funcionam ANTES de adicioná-los ao Google OAuth:
+   - Página inicial: https://4gz1nh0.github.io/projecthub-legal/
+   - Política: https://4gz1nh0.github.io/projecthub-legal/privacidade.html
+   - Termos: https://4gz1nh0.github.io/projecthub-legal/termos.html
+
+## 2. ALERTA: aceitação dos domínios pelo Google
+GitHub Pages é um serviço de hospedagem com domínio compartilhado. **O Google poderá recusar `4gz1nh0.github.io` como domínio autorizado** mesmo após a publicação. O uso de um domínio próprio comprovadamente verificável no Google Search Console é a rota confiável para aprovação de branding OAuth. **NÃO informe URLs como existentes antes de publicá-las**; se o Google rejeitar, NÃO force verificação com domínios que não controla. Podemos reutilizar os arquivos no seu domínio próprio sem alterar conteúdo.
+
+## 3. O que informar nos campos Branding APÓS os links funcionarem
+Nome: ProjectHUB
+E-mail de suporte: manter o existente
+Página inicial: https://4gz1nh0.github.io/projecthub-legal/
+Privacidade: https://4gz1nh0.github.io/projecthub-legal/privacidade.html
+Termos: https://4gz1nh0.github.io/projecthub-legal/termos.html
+Domínio autorizado: 4gz1nh0.github.io (SE o Google permitir)
+E-mail do desenvolvedor: manter o existente
+Logotipo: opcional, pode deixar vazio
+
+### Checagens importantes
+- A página inicial mostra nome e função real, e contém link à política.
+- Páginas não exigem login.
+- Revisar o texto jurídico e contato antes de publicação.
+- Não publicar ZIP do código ProjectHUB, chaves ou tokens num repositório público.
+- Fazer o OAuth do *projeto Cloud realmente associado* às autorizações. O ProjectHUB original no Apps Script informava projeto GCP padrão, e outro cliente OAuth com o mesmo nome pode não estar vinculado ao Apps Script.
+- Colocar o app em produção NÃO resolve automaticamente o erro de escopo 403. Concessão de escopos deve ser validada separadamente.
